@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav class="menu active">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">Services</a>
+                        <ul>
+                            <li><a href="#" onclick="loadPage('service1.html')">Service 1</a></li>
+                            <li><a href="#">Service 2</a></li>
+                            <li><a href="#">Service 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="carousel">
+                <!-- Carousel Images Go Here -->
+                <img src="image1.jpg" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+        </main>
+        <main id="main-content">
+          <!-- Content will be dynamically loaded here -->
+        </main>
+        <footer>
+            <p>Contact Information: example@example.com | 123-456-7890</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

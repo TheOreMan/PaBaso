@@ -1,0 +1,97 @@
+/* Add the following styles to adjust the layout */
+.wrapper {
+    display: flex;
+}
+
+.menu-toggle {
+    cursor: pointer; /* Specifies the cursor style */
+}
+
+header {
+    width: 200px; /* Width of the left sidebar */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+.menu {
+    margin-top: 20px;
+    display: none;
+}
+
+.menu ul ul {
+    display: none;
+    position: relative;
+    left: 5%; /* Adjusts the position of the sub-menu */
+    top: 0;
+}
+
+.menu li:hover > ul {
+    display: block;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center; /* Horizontally center the items */
+  align-items: center; /* Vertically center the items */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column; /* Change flex-direction to row */
+    min-width: 100vh; /* Ensure the wrapper fills the viewport height */
+}
+
+#main-content {
+    padding: 50px; /* Apply padding to the main content */
+}
+
+main {
+    flex: 1;
+    margin-left: 220px; /* Adjusts the main content position */
+    margin-top: 20px; /* Add some space between the sections */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Add the following styles to implement the hideable menu */
+.menu.active {
+    display: block;
+}
+
+.menu a {
+    color: #006400; /* Change to your desired text color */
+    font-size: 24px;
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+/* Add a different color when hovering over menu items */
+.menu a:hover {
+    color: #2E8B57; /* Change to your desired hover text color */
+    font-size: 28px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 200px; /* Width of the sidebar */
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        z-index: 1000; /* Ensure the menu is above other content */
+    }
